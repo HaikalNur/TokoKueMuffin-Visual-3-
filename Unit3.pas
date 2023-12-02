@@ -200,7 +200,6 @@ end;
 
 
 procedure TForm3.btn4Click(Sender: TObject);
-
 var
   DeleteID: Integer;
   MaxID: Integer;
@@ -263,7 +262,6 @@ end;
 
 
 procedure TForm3.btn3Click(Sender: TObject);
-
 begin
 // Update code
 zqry1.SQL.Clear;

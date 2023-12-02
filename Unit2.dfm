@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 246
-  Top = 177
+  Left = 291
+  Top = 379
   Width = 654
   Height = 289
   Caption = 'MainMenu'
@@ -15,6 +15,23 @@ object Form2: TForm2
   OnClose = Close
   PixelsPerInch = 96
   TextHeight = 13
+  object Label1: TLabel
+    Left = 40
+    Top = 16
+    Width = 521
+    Height = 171
+    Caption = 
+      'Error Dibagian Exit Memory Access, saya tidak tau cara'#13#10'memperba' +
+      'iki nya'#13#10'untuk bagian terletak disetiap Form saya tidak sempat m' +
+      'enaruh di menu'#13#10#13#10'Nama : Muhammad Haikal Nurrahman'#13#10'NPM:21100101' +
+      '80'#13#10'Kelas : 5E Reg BJM'#13#10#13#10
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
   object mm1: TMainMenu
     object mnimain1: TMenuItem
       Caption = 'tabel'
@@ -28,6 +45,7 @@ object Form2: TForm2
       end
       object Pe1: TMenuItem
         Caption = 'Pelanggan'
+        OnClick = Pe1Click
       end
       object mniPenjualan1: TMenuItem
         Caption = 'Transaksi Penjualan'

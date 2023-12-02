@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Grids, DBGrids, DB, ZAbstractRODataset,
   ZAbstractDataset, ZDataset, ZAbstractConnection, ZConnection, Menus, Unit3,
-  Unit4;
+  Unit4, Unit5;
 
 type
   TForm2 = class(TForm)
@@ -19,10 +19,12 @@ type
     Pe1: TMenuItem;
     mniPenjualan1: TMenuItem;
     mniItemPenjualan1: TMenuItem;
+    Label1: TLabel;
     procedure exit1Click(Sender: TObject);
     procedure Close(Sender: TObject; var Action: TCloseAction);
     procedure mniKaryawan1Click(Sender: TObject);
     procedure mniSupplier1Click(Sender: TObject);
+    procedure Pe1Click(Sender: TObject);
    
   private
     { Private declarations }
@@ -76,4 +78,16 @@ begin
     Form4.Free; // Free the memory occupied by Form3 when it's closed
   end;
 end;
+procedure TForm2.Pe1Click(Sender: TObject);
+var
+  Form5: TForm5;
+begin
+  Form5 := TForm5.Create(Self);
+  try
+    Form5.ShowModal;
+  finally
+    Form5.Free;
+  end;
+end;
+
 end.

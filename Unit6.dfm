@@ -1,9 +1,9 @@
-object Form4: TForm4
-  Left = 121
-  Top = 150
-  Width = 707
-  Height = 459
-  Caption = 'Form4'
+object Form6: TForm6
+  Left = 459
+  Top = 158
+  Width = 695
+  Height = 450
+  Caption = 'Form6'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,11 +11,10 @@ object Form4: TForm4
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
-    Left = 32
+    Left = 24
     Top = 32
     Width = 11
     Height = 16
@@ -28,7 +27,7 @@ object Form4: TForm4
     ParentFont = False
   end
   object telepon: TLabel
-    Left = 32
+    Left = 24
     Top = 64
     Width = 37
     Height = 16
@@ -41,7 +40,7 @@ object Form4: TForm4
     ParentFont = False
   end
   object Alamat: TLabel
-    Left = 32
+    Left = 24
     Top = 96
     Width = 40
     Height = 16
@@ -54,7 +53,7 @@ object Form4: TForm4
     ParentFont = False
   end
   object Kota: TLabel
-    Left = 32
+    Left = 24
     Top = 128
     Width = 25
     Height = 16
@@ -67,7 +66,7 @@ object Form4: TForm4
     ParentFont = False
   end
   object KodePos: TLabel
-    Left = 32
+    Left = 24
     Top = 160
     Width = 25
     Height = 16
@@ -80,11 +79,11 @@ object Form4: TForm4
     ParentFont = False
   end
   object Label1: TLabel
-    Left = 256
+    Left = 248
     Top = 8
-    Width = 183
+    Width = 196
     Height = 16
-    Caption = 'Tabel Supplier'
+    Caption = 'Tabel Transaksi'
     Font.Charset = OEM_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -93,7 +92,7 @@ object Form4: TForm4
     ParentFont = False
   end
   object dbgrd1: TDBGrid
-    Left = 16
+    Left = 8
     Top = 192
     Width = 609
     Height = 153
@@ -104,81 +103,76 @@ object Form4: TForm4
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
-    OnCellClick = OnCell
   end
   object edt1: TEdit
-    Left = 160
+    Left = 152
     Top = 32
     Width = 345
     Height = 21
     TabOrder = 1
   end
   object edt2: TEdit
-    Left = 160
+    Left = 152
     Top = 64
     Width = 345
     Height = 21
     TabOrder = 2
   end
   object edt3: TEdit
-    Left = 160
+    Left = 152
     Top = 96
     Width = 345
     Height = 21
     TabOrder = 3
   end
   object edt4: TEdit
-    Left = 160
+    Left = 152
     Top = 128
     Width = 345
     Height = 21
     TabOrder = 4
   end
   object edt5: TEdit
-    Left = 160
+    Left = 152
     Top = 160
     Width = 345
     Height = 21
     TabOrder = 5
   end
   object btn1: TButton
-    Left = 24
+    Left = 16
     Top = 352
     Width = 105
     Height = 41
     Caption = 'Baru'
     TabOrder = 6
-    OnClick = btn1Click
   end
   object btn2: TButton
-    Left = 144
+    Left = 136
     Top = 352
     Width = 105
     Height = 41
     Caption = 'Simpan'
     TabOrder = 7
-    OnClick = btn2Click
   end
   object btn3: TButton
-    Left = 384
+    Left = 376
     Top = 352
     Width = 105
     Height = 41
     Caption = 'Edit'
     TabOrder = 8
-    OnClick = btn3Click
   end
   object btn4: TButton
-    Left = 264
+    Left = 256
     Top = 352
     Width = 105
     Height = 41
     Caption = 'Hapus'
     TabOrder = 9
-    OnClick = btn4Click
   end
   object btn5: TButton
-    Left = 504
+    Left = 496
     Top = 352
     Width = 105
     Height = 41
@@ -186,13 +180,12 @@ object Form4: TForm4
     TabOrder = 10
   end
   object btn6: TButton
-    Left = 512
+    Left = 504
     Top = 160
     Width = 89
     Height = 25
     Caption = 'LAPORAN'
     TabOrder = 11
-    OnClick = btn6Click
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -205,29 +198,29 @@ object Form4: TForm4
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 'C:\Users\moxy\Desktop\Koneksi\libmysql.dll'
-    Left = 512
+    Left = 504
     Top = 8
   end
   object zqry1: TZQuery
     Connection = con1
     Active = True
     SQL.Strings = (
-      'select * from supplier'
+      'select * from pelanggan'
       '')
     Params = <>
-    Left = 560
+    Left = 552
     Top = 56
   end
   object ds1: TDataSource
     DataSet = zqry1
-    Left = 608
+    Left = 600
     Top = 8
   end
   object frxdbdtst1: TfrxDBDataset
     UserName = 'frxdbdtst1'
     CloseDataSource = False
     DataSet = zqry1
-    Left = 576
+    Left = 568
     Top = 8
   end
   object frxrprt1: TfrxReport
@@ -245,7 +238,7 @@ object Form4: TForm4
       'begin'
       ''
       'end.')
-    Left = 544
+    Left = 536
     Top = 8
     Datasets = <
       item

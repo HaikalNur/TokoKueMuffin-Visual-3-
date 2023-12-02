@@ -1,9 +1,9 @@
-object Form4: TForm4
-  Left = 121
-  Top = 150
-  Width = 707
-  Height = 459
-  Caption = 'Form4'
+object Form5: TForm5
+  Left = 333
+  Top = 96
+  Width = 677
+  Height = 450
+  Caption = 'Form5'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -82,9 +82,9 @@ object Form4: TForm4
   object Label1: TLabel
     Left = 256
     Top = 8
-    Width = 183
+    Width = 196
     Height = 16
-    Caption = 'Tabel Supplier'
+    Caption = 'Tabel Pelanggan'
     Font.Charset = OEM_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -148,7 +148,6 @@ object Form4: TForm4
     Height = 41
     Caption = 'Baru'
     TabOrder = 6
-    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 144
@@ -157,7 +156,6 @@ object Form4: TForm4
     Height = 41
     Caption = 'Simpan'
     TabOrder = 7
-    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 384
@@ -166,7 +164,6 @@ object Form4: TForm4
     Height = 41
     Caption = 'Edit'
     TabOrder = 8
-    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 264
@@ -175,7 +172,6 @@ object Form4: TForm4
     Height = 41
     Caption = 'Hapus'
     TabOrder = 9
-    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 504
@@ -192,7 +188,6 @@ object Form4: TForm4
     Height = 25
     Caption = 'LAPORAN'
     TabOrder = 11
-    OnClick = btn6Click
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -212,7 +207,7 @@ object Form4: TForm4
     Connection = con1
     Active = True
     SQL.Strings = (
-      'select * from supplier'
+      'select * from pelanggan'
       '')
     Params = <>
     Left = 560
