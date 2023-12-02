@@ -11,6 +11,7 @@ object Form3: TForm3
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -147,6 +148,7 @@ object Form3: TForm3
     Height = 41
     Caption = 'Baru'
     TabOrder = 6
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 144
@@ -155,6 +157,7 @@ object Form3: TForm3
     Height = 41
     Caption = 'Simpan'
     TabOrder = 7
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 384
@@ -163,6 +166,7 @@ object Form3: TForm3
     Height = 41
     Caption = 'Edit'
     TabOrder = 8
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 264
@@ -171,6 +175,7 @@ object Form3: TForm3
     Height = 41
     Caption = 'Hapus'
     TabOrder = 9
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 504
@@ -179,6 +184,7 @@ object Form3: TForm3
     Height = 41
     Caption = 'Batal'
     TabOrder = 10
+    OnClick = btn5Click
   end
   object btn6: TButton
     Left = 512
@@ -187,6 +193,7 @@ object Form3: TForm3
     Height = 25
     Caption = 'Laporan'
     TabOrder = 11
+    OnClick = btn6Click
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
