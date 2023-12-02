@@ -1,6 +1,6 @@
 object Form5: TForm5
-  Left = 333
-  Top = 96
+  Left = 208
+  Top = 115
   Width = 677
   Height = 450
   Caption = 'Form5'
@@ -148,6 +148,7 @@ object Form5: TForm5
     Height = 41
     Caption = 'Baru'
     TabOrder = 6
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 144
@@ -156,6 +157,7 @@ object Form5: TForm5
     Height = 41
     Caption = 'Simpan'
     TabOrder = 7
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 384
@@ -164,6 +166,7 @@ object Form5: TForm5
     Height = 41
     Caption = 'Edit'
     TabOrder = 8
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 264
@@ -172,6 +175,7 @@ object Form5: TForm5
     Height = 41
     Caption = 'Hapus'
     TabOrder = 9
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 504
@@ -180,6 +184,7 @@ object Form5: TForm5
     Height = 41
     Caption = 'Batal'
     TabOrder = 10
+    OnClick = btn5Click
   end
   object btn6: TButton
     Left = 512

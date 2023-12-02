@@ -42,6 +42,7 @@ type
     procedure btn3Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btn6Click(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
 
 
 
@@ -146,7 +147,6 @@ edt5.Enabled:= True;
 end;
 
 procedure TForm4.btn2Click(Sender: TObject);
-
 var
   KodeBarangExists, NamaExists: Boolean;
 
@@ -200,7 +200,6 @@ begin
 end;
 
 procedure TForm4.btn4Click(Sender: TObject);
-
 var
   DeleteID: Integer;
   MaxID: Integer;
@@ -277,6 +276,11 @@ end;
 procedure TForm4.btn6Click(Sender: TObject);
 begin
 frxrprt1.ShowReport();
+end;
+
+procedure TForm4.btn5Click(Sender: TObject);
+begin
+posisiawal;
 end;
 
 end.
