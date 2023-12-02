@@ -1,9 +1,9 @@
-object Form6: TForm6
-  Left = 397
-  Top = 226
-  Width = 695
+object Form7: TForm7
+  Left = 276
+  Top = 254
+  Width = 678
   Height = 450
-  Caption = 'Form6'
+  Caption = 'Form7'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -79,11 +79,11 @@ object Form6: TForm6
     ParentFont = False
   end
   object Label1: TLabel
-    Left = 248
+    Left = 232
     Top = 8
-    Width = 196
+    Width = 209
     Height = 16
-    Caption = 'Tabel Transaksi'
+    Caption = 'Tabel Pengiriman'
     Font.Charset = OEM_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -180,7 +180,7 @@ object Form6: TForm6
     TabOrder = 10
   end
   object btn6: TButton
-    Left = 504
+    Left = 520
     Top = 160
     Width = 89
     Height = 25
