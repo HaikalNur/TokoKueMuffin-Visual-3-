@@ -37,6 +37,7 @@ type
     procedure OnCell(Column: TColumn);
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
 
     
   private
@@ -116,7 +117,7 @@ btn3.Enabled:=False;
 btn4.Enabled:=False;
 btn5.Enabled:=True;
 
-edt1.Enabled:= True;
+edt1.Enabled:= False;
 edt2.Enabled:= True;
 edt3.Enabled:= True;
 edt4.Enabled:= True;
@@ -124,43 +125,73 @@ edt5.Enabled:= True;
 end;
 
 procedure TForm3.btn2Click(Sender: TObject);
+var
+  KodeBarangExists, NamaExists: Boolean;
 begin
 
+  if edt2.Text = '' then
+    ShowMessage('No TELEPON TIDAK BOLEH KOSONG!')
+  else if edt3.Text = '' then
+    ShowMessage('Alamat TIDAK BOLEH KOSONG!')
+  else if edt4.Text = '' then
+    ShowMessage('Kota TIDAK BOLEH KOSONG!')
+  else if edt5.Text = '' then
+    ShowMessage('Kodepos TIDAK BOLEH KOSONG!')
+  else
+  begin
+    // Check if 'kode-barang' already exists in the database
+    zqry1.SQL.Clear;
+    zqry1.SQL.Add('SELECT COUNT(*) FROM barang WHERE `kode-barang` = :KodeBarang');
+    zqry1.ParamByName('KodeBarang').AsString := edt2.Text;
+    zqry1.Open;
+    KodeBarangExists := zqry1.Fields[0].AsInteger > 0;
+    zqry1.Close;
 
-if edt2.Text ='' then
-begin
-ShowMessage('No TELEPON TIDAK BOLEH KOSONG!');
-end else
-if edt3.Text ='' then
-begin
-ShowMessage('alamat TIDAK BOLEH KOSONG!');
-end else
-if edt4.Text ='' then
-begin
-ShowMessage('kota TIDAK BOLEH KOSONG!');
-end else
-if edt5.Text ='' then
-begin
-ShowMessage('kodepos TIDAK BOLEH KOSONG!');
-end else
-begin
-// Insert data into the database table 'barang' with its respective fields
-  zqry1.SQL.Clear;
-  zqry1.SQL.Add('INSERT INTO barang (id, `kode-barang`, nama, harga, stok) ' +
-                'VALUES (null, :KodeBarang, :Nama, :Harga, :Stok)');
-  zqry1.ParamByName('KodeBarang').AsString := edt2.Text;
-  zqry1.ParamByName('Nama').AsString := edt3.Text;
-  zqry1.ParamByName('Harga').AsString := edt4.Text;
-  zqry1.ParamByName('Stok').AsString := edt5.Text;
-  zqry1.ExecSQL;
+    // Check if 'nama' already exists in the database
+    zqry1.SQL.Clear;
+    zqry1.SQL.Add('SELECT COUNT(*) FROM barang WHERE nama = :Nama');
+    zqry1.ParamByName('Nama').AsString := edt3.Text;
+    zqry1.Open;
+    NamaExists := zqry1.Fields[0].AsInteger > 0;
+    zqry1.Close;
 
-  // Refresh the dataset
-  zqry1.SQL.Clear;
-  zqry1.SQL.Add('SELECT * FROM barang');
-  zqry1.Open;
+    if KodeBarangExists or NamaExists then
+    begin
+      if KodeBarangExists then
+        ShowMessage('Duplicate Kode Barang!');
+      if NamaExists then
+        ShowMessage('Duplicate Nama!');
+      // Show a message or handle duplicate entry according to your requirements
+    end
+    else
+    begin
+      // Insert data into the database
+      zqry1.SQL.Clear;
+      zqry1.SQL.Add('INSERT INTO barang (`kode-barang`, nama, harga, stok) ' +
+                    'VALUES (:KodeBarang, :Nama, :Harga, :Stok)');
+      zqry1.ParamByName('KodeBarang').AsString := edt2.Text;
+      zqry1.ParamByName('Nama').AsString := edt3.Text;
+      zqry1.ParamByName('Harga').AsString := edt4.Text;
+      zqry1.ParamByName('Stok').AsString := edt5.Text;
+      zqry1.ExecSQL;
+
+      // Refresh the dataset
+      zqry1.SQL.Clear;
+      zqry1.SQL.Add('SELECT * FROM barang');
+      zqry1.Open;
+    end;
+      zqry1.SQL.Clear;
+      zqry1.SQL.Add('SELECT * FROM barang');
+      zqry1.Open;
+  end;
 end;
+
+
+
+
+procedure TForm3.FormCreate(Sender: TObject);
+begin
+posisiawal;
 end;
-
-
 
 end.
