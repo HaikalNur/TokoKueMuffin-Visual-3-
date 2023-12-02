@@ -1,7 +1,7 @@
 object Form2: TForm2
-  Left = 252
-  Top = 161
-  Width = 769
+  Left = 246
+  Top = 177
+  Width = 654
   Height = 289
   Caption = 'MainMenu'
   Color = clBtnFace
@@ -24,6 +24,7 @@ object Form2: TForm2
       end
       object mniSupplier1: TMenuItem
         Caption = 'Supplier'
+        OnClick = mniSupplier1Click
       end
       object Pe1: TMenuItem
         Caption = 'Pelanggan'

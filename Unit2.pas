@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Grids, DBGrids, DB, ZAbstractRODataset,
-  ZAbstractDataset, ZDataset, ZAbstractConnection, ZConnection, Menus, Unit3;
+  ZAbstractDataset, ZDataset, ZAbstractConnection, ZConnection, Menus, Unit3,
+  Unit4;
 
 type
   TForm2 = class(TForm)
@@ -21,6 +22,7 @@ type
     procedure exit1Click(Sender: TObject);
     procedure Close(Sender: TObject; var Action: TCloseAction);
     procedure mniKaryawan1Click(Sender: TObject);
+    procedure mniSupplier1Click(Sender: TObject);
    
   private
     { Private declarations }
@@ -57,8 +59,21 @@ begin
   try
     Form3.ShowModal; // Show Form3 modally
   finally
+
     Form3.Free; // Free the memory occupied by Form3 when it's closed
   end;
 end;
 
+procedure TForm2.mniSupplier1Click(Sender: TObject);
+var
+  Form4: TForm4; // Declare a variable to hold Form3
+begin
+  Form4 := TForm4.Create(Self); // Create an instance of Form3
+  try
+    Form4.ShowModal; // Show Form3 modally
+  finally
+
+    Form4.Free; // Free the memory occupied by Form3 when it's closed
+  end;
+end;
 end.

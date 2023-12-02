@@ -85,7 +85,6 @@ end;
 
 
 procedure TForm3.OnCell(Column: TColumn);
-
 var
   SelectedRow: Integer;
   ClickedColumn: Integer;
